@@ -1,5 +1,12 @@
 # CHANGELOG.md
 
+
+## 1.0.4
+
+Bugfix:
+
+- Added assembly definition
+
 ## 1.0.3
 
 Features:
