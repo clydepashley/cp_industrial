@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## 1.0.5
+
+Features:
+
+- Added greenify shaders
 
 ## 1.0.4
 
