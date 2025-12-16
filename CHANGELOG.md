@@ -1,5 +1,9 @@
 # CHANGELOG.md
 
+##1.0.6
+
+- Updated shader namespaces
+
 ## 1.0.5
 
 Features:
