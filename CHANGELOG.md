@@ -1,10 +1,14 @@
 # CHANGELOG.md
 
-## 1.0.6
+## 1.0.7
 
 Features:
 
 - Added staggered animator
+
+##1.0.6
+
+- Updated shader namespaces
 
 ## 1.0.5
 

@@ -417,7 +417,7 @@
         },
         "preventRotation": false
     },
-    "m_Path": "Shader Graphs",
+    "m_Path": "CP",
     "m_GraphPrecision": 1,
     "m_PreviewMode": 2,
     "m_OutputNode": {
@@ -1888,8 +1888,8 @@
     "m_ObjectId": "8fd273940a544554a33c8d2078d81988",
     "m_Title": "Displacement direction",
     "m_Position": {
-        "x": -2403.999755859375,
-        "y": -1034.500244140625
+        "x": -2404.000244140625,
+        "y": -1034.5
     }
 }
 
@@ -2435,8 +2435,8 @@
     "m_ObjectId": "bbe6171f63d04d60b40f0c243652915e",
     "m_Title": "Displacement factor",
     "m_Position": {
-        "x": -2538.5,
-        "y": -1448.0001220703125
+        "x": -2538.500244140625,
+        "y": -1448.0
     }
 }
 

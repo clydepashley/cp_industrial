@@ -467,7 +467,7 @@
         },
         "preventRotation": false
     },
-    "m_Path": "Shader Graphs",
+    "m_Path": "CP",
     "m_GraphPrecision": 1,
     "m_PreviewMode": 2,
     "m_OutputNode": {
@@ -2439,8 +2439,8 @@
     "m_ObjectId": "bbe6171f63d04d60b40f0c243652915e",
     "m_Title": "Displacement factor",
     "m_Position": {
-        "x": -1342.0,
-        "y": -731.5
+        "x": -1342.0001220703125,
+        "y": -731.5000610351563
     }
 }
 
