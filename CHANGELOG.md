@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 1.0.6
+
+Features:
+
+- Added staggered animator
+
 ## 1.0.5
 
 Features:
