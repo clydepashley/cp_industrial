@@ -688,7 +688,7 @@ PrefabInstance:
     - target: {fileID: -6155447768614035336, guid: a32ada67ac5a44398881205332dfd302, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e68f0d37d93e5124db340a6beb60029e, type: 2}
+      objectReference: {fileID: 2100000, guid: 4aec877e22eac4254b204014a32eb474, type: 2}
     - target: {fileID: -5913172463669914825, guid: a32ada67ac5a44398881205332dfd302, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0000000020541369
@@ -811,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a32ada67ac5a44398881205332dfd302, type: 3}
       propertyPath: m_Name
-      value: Splash_001_RiggedTrail
+      value: Trail_Rigged_001_RiggedTrail
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a32ada67ac5a44398881205332dfd302, type: 3}
       propertyPath: m_IsActive
