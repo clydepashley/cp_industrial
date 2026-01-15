@@ -1,5 +1,18 @@
 # CHANGELOG.md
 
+
+## 1.0.8
+
+Features:
+
+- More mesh trails
+
+## 1.0.7
+
+Features:
+
+- Added staggered animator
+
 ##1.0.6
 
 - Updated shader namespaces
