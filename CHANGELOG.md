@@ -1,5 +1,10 @@
 # CHANGELOG.md
 
+## 1.0.9
+
+Bugfix:
+
+- Don't always update shader values in scripts
 
 ## 1.0.8
 

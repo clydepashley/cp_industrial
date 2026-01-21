@@ -1,6 +1,5 @@
 using UnityEngine;
 
-[ExecuteAlways]
 public class PassVector3ToShader : MonoBehaviour
 {
     [Tooltip("The target GameObject whose world position will be passed to the shader.")]
