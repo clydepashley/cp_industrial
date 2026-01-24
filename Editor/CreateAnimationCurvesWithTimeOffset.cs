@@ -1,79 +1,28 @@
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.Splines;
 using System.Collections.Generic;
 
-public class Splines_OffsetApplier : EditorWindow
+public class CreateAnimationCurvesWithTimeOffset : EditorWindow
 {
-    // -------- StartOffset tool --------
-    private GameObject rootObject;
-    private float offsetValue = 0.1f;
-
-    // --------- Create Animation Curves with Time Offset tool --------
     GameObject animatorRoot;
     GameObject firstSplineAnimator;
     AnimationClip animationClip;
     float timeOffset = 0.1f;
 
-    [MenuItem("CP_Tools/Spline Offset Applier")]
-    public static void ShowWindow()
+    [MenuItem("CP_Tools/Create Animation Curves With Time Offset")]
+    static void Init()
     {
-        GetWindow<Splines_OffsetApplier>("Spline Offset Applier");
+        CreateAnimationCurvesWithTimeOffset window = (CreateAnimationCurvesWithTimeOffset)GetWindow(typeof(CreateAnimationCurvesWithTimeOffset));
+        window.titleContent = new GUIContent("Create Curves With Offset");
+        window.Show();
     }
 
-    private void OnGUI()
+    void OnGUI()
     {
-
         GUIStyle wrapStyle = new GUIStyle(EditorStyles.label);
         wrapStyle.wordWrap = true;
         wrapStyle.richText = true;
-
-        // ===============================================================
-        // START OFFSET Tool
-        // ===============================================================
-        GUILayout.Label("Apply staggered spline Start Offsets (reversed)", EditorStyles.boldLabel);
-        GUILayout.Label("Select the top object in a heirarchy of SplineAnimate components and set the offset to easily visualize the staggered effect", wrapStyle);
-        rootObject = (GameObject)EditorGUILayout.ObjectField(
-            "Root Object",
-            rootObject,
-            typeof(GameObject),
-            true);
-        offsetValue = EditorGUILayout.FloatField(
-            "Offset Value (StartOffset)",
-            offsetValue);
-        if (GUILayout.Button("Apply StartOffsets"))
-        {
-            if (rootObject == null)
-            {
-                Debug.LogWarning("Please assign a root object.");
-                return;
-            }
-            var chain = new List<Transform>();
-            CollectSplineAnimateChain(rootObject.transform, chain);
-            if (chain.Count == 0)
-            {
-                Debug.LogWarning("No SplineAnimate components found in the chain.");
-                return;
-            }
-            int count = chain.Count;
-            for (int i = 0; i < count; i++)
-            {
-                var splineAnimate = chain[i].GetComponent<SplineAnimate>();
-                if (splineAnimate != null)
-                {
-                    splineAnimate.StartOffset = offsetValue * (count - 1 - i);
-                    EditorUtility.SetDirty(splineAnimate);
-                }
-            }
-            Debug.Log($"Applied StartOffsets to {chain.Count} bones.");
-        }
-        // ===============================================================
-        // Create Animation Curves with Time Offset Tool
-        // ===============================================================
-        EditorGUILayout.Space();
-        EditorGUILayout.LabelField("", GUI.skin.horizontalSlider);
-        GUILayout.Label("Create Animation Curves with Time Offset", EditorStyles.boldLabel);
-        GUILayout.Label("Populate with a heirarchy of objects that have Splines_AnimateNormalizedTimeWrapper, and use this to create a delayed effect for the each child in turn. You can draw a custom complex animation curve for the top object, and it will copy this to all children with a delay between each. It will <color=red>overwrite the original</color> animation clip", wrapStyle);
+        GUILayout.Label("<color=yellow>Deprecated:</color> merged with Splines_OffsetApplier, will delete when tested", wrapStyle);
         GUILayout.Label("Parameters", EditorStyles.boldLabel);
 
         animatorRoot = (GameObject)EditorGUILayout.ObjectField("Animator Root", animatorRoot, typeof(GameObject), true);
@@ -93,28 +42,6 @@ public class Splines_OffsetApplier : EditorWindow
         }
     }
 
-    // ===============================================================
-    // CHAIN COLLECTION
-    // ===============================================================
-    private void CollectSplineAnimateChain(Transform current, List<Transform> chain)
-    {
-        if (current.GetComponent<SplineAnimate>() == null)
-            return;
-        chain.Add(current);
-        foreach (Transform child in current)
-        {
-            if (child.GetComponent<SplineAnimate>() != null)
-            {
-                CollectSplineAnimateChain(child, chain);
-                break;
-            }
-        }
-    }
-
-
-   // ===============================================================
-    // Create Animation Curves with Time Offset tool
-    // ===============================================================   
     void CreateCurvesWithOffset()
     {
         var firstWrapper = firstSplineAnimator.GetComponent<Splines_AnimateNormalizedTimeWrapper>();
@@ -225,5 +152,4 @@ public class Splines_OffsetApplier : EditorWindow
             GetChildrenWithComponent(child, list);
         }
     }
-
 }

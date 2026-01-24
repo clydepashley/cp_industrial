@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 1.0.10
+
+Features:
+
+- Staggered splines tools, used mainly for animating rigged trails along splines (easy liquids, etc)
+
 ## 1.0.9
 
 Bugfix:
