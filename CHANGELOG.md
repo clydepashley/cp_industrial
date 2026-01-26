@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 1.0.11
+
+Features:
+
+- New liquid trail
+
 ## 1.0.10
 
 Features:
