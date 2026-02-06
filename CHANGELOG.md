@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 1.0.12
+
+Features:
+
+- Spline particles
+
 ## 1.0.11
 
 Features:
