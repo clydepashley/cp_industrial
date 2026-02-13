@@ -1,5 +1,11 @@
 # CHANGELOG.md
 
+## 1.0.13
+
+Features:
+
+- Proximity Utils
+
 ## 1.0.12
 
 Features:
